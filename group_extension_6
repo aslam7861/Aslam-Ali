@@ -1,0 +1,36 @@
+> f:=x^6 - 13*x^5 + 65*x^4 - 156*x^3 + 182*x^2 - 91*x + 13;
+>  g:= x^6 - 26*x^5 + 215*x^4 - 598*x^3 + 350*x^2 + 416*x - 47; 
+> L:= NumberField(f);
+> L1:= NumberField(g);
+> time c,a,b,l :=group_extension_compositum(L,L1,23^2);
+Time: 58.520
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+Time: 59.420
+> a;
+Cohomology Module
+> c;
+Finitely presented group c on 2 generators
+Relations
+    c.2^253 = Id(c)
+    (c.1, c.2^-1) = Id(c)
+    c.1^6 = Id(c)
+> b;
+Matrix with 1 row and 0 columns
+> GroupName(c); 
+C1518
+> time c,a,b,l :=group_extension_compositum(L,L1,17^2);
+Time: 47.060
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+Time: 48.560
+> b;
+Matrix with 1 row and 0 columns
+> c;
+Finitely presented group c on 2 generators
+Relations
+    c.2^272 = Id(c)
+    c.1^-1 * c.2 * c.1 * c.2^-137 = Id(c)
+    c.1^6 = Id(c)
