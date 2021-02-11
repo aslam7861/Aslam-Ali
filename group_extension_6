@@ -34,3 +34,76 @@ Relations
     c.2^272 = Id(c)
     c.1^-1 * c.2 * c.1 * c.2^-137 = Id(c)
     c.1^6 = Id(c)
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+> r,mr := RayClassGroup(3^4*MaximalOrder(L));
+> A:=AbelianExtension(mr);
+> ca,w1,w2,w3 := CohomologyModule(A);
+> CohomologyGroup(ca,2);
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+> H := Group(ca);
+> _,phi:= IsIsomorphic(H,G);
+>  mm:= hom<car<G,G>-> L | x:->&*[x@h:h in set ]>;
+> cocycle :=IdentifyTwoCocycle(ca, func<x | (<x[1]@phi, x[2]@phi>)@mm@@mr@@w3>\
+);
+> cocycle;
+(0)
+
+> [GroupName(Extension(ca, i*C2.1)): i in [1..#C2+1]];
+[ C162, C162, C3*C54, C162 ]
+
+>>>>>>>>>>>
+> r,mr := RayClassGroup(29^2*MaximalOrder(L));
+> A:=AbelianExtension(mr);
+> ca,w1,w2,w3 := CohomologyModule(A);
+> CohomologyGroup(ca,2);
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+> H := Group(ca);
+> _,phi:= IsIsomorphic(H,G);
+>  mm:= hom<car<G,G>-> L | x:->&*[x@h:h in set ]>;
+> cocycle :=IdentifyTwoCocycle(ca, func<x | (<x[1]@phi, x[2]@phi>)@mm@@mr@@w3>\
+);
+> cocycle;                                                                     
+(0)
+> Extension(ca,$1);
+Finitely presented group on 2 generators
+Relations
+    $.2^812 = Id($)
+    $.1^-1 * $.2 * $.1 * $.2^-407 = Id($)
+    $.1^6 = Id($)
+Homomorphism of GrpFP into GrpPerm: H, Degree 6, Order 2 * 3 induced by
+    $.1 |--> (1, 2, 4, 6, 5, 3)
+    $.2 |--> Id(H)
+Mapping from: Abelian Group isomorphic to Z/812
+Defined on 1 generator
+Relations:
+    812*$.1 = 0 to GrpFP
+> C2:=CohomologyGroup(ca,2);                          
+> [GroupName(Extension(ca, i*C2.1)): i in [1..#C2+1]];
+[ C609:Q8, C609:D4, C609:Q8 ]
+>>>>>>>>>>>
+
+> r,mr := RayClassGroup(31^2*MaximalOrder(L));
+> A:=AbelianExtension(mr);
+> ca,w1,w2,w3 := CohomologyModule(A);
+> CohomologyGroup(ca,2);
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+> H := Group(ca);
+> _,phi:= IsIsomorphic(H,G);
+>  mm:= hom<car<G,G>-> L | x:->&*[x@h:h in set ]>;
+> cocycle :=IdentifyTwoCocycle(ca, func<x | (<x[1]@phi, x[2]@phi>)@mm@@mr@@w3>\
+);
+> cocycle;
+(0)
+> C2:=CohomologyGroup(ca,2);
+> [GroupName(Extension(ca, i*C2.1)): i in [1..#C2+1]];
+[ C2790, C2790, C3*C930, C2790 ]
+
+
+
