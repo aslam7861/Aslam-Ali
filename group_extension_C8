@@ -1,0 +1,48 @@
+> time c,a,b := group_extension(L,17,13*23);
+Time: 2.430
+> b;
+(3)
+> c;
+Finitely presented group c on 3 generators
+Relations
+    c.2^12 = Id(c)
+    c.3^132 = Id(c)
+    (c.2, c.3) = Id(c)
+    c.1^-1 * c.2 * c.1 * c.3^-55 * c.2^-7 = Id(c)
+    c.1^-1 * c.3 * c.1 * c.3^-23 = Id(c)
+    c.1^8 * c.2^-2 * c.3^-1 = Id(c)
+> GroupName(c);
+C132.(C4*C24)
+> C2:= CohomologyGroup(a,2);
+> GroupName(Extension(a,C2.1));
+C132.(C4*C24)
+> GroupName(Extension(a,0*C2.1));
+C132.(C4*C24)
+> GroupName(Extension(a,3*C2.1));
+C132.(C4*C24)
+> time c,a,b := group_extension(L,17,13);   
+Time: 0.770
+> GroupName(c);
+C3*OD32
+> C2:= CohomologyGroup(a,2);
+> C2;
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+> b;
+(1)
+> GroupName(Extension(a,2*C2.1));
+C3*C4:C8
+
+
+
+> time c,a,b,list := group_extension(L,17,29^2);
+Time: 0.860
+> b;
+(1)
+> C2:= CohomologyGroup(a,2);
+> GroupName(Extension(a,2*C2.1));            
+C2*C1624
+> GroupName(c);                               
+C3248
+> 
