@@ -1,0 +1,66 @@
+L:=NumberField(PolynomialWithGaloisGroup(4,1));
+> time G,c,g,list:= group_extension(L,5,23*13);
+Time: 0.190
+> C2:=CohomologyGroup(c,2);
+> C2;
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 4 ]
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^132 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.1, G.2^-1) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    G.1^4 * G.3^-1 = Id(G)
+> [GroupName(Extension(c,i*C2.1)): i in [1..4]];
+[ C4*C264, C2*C4*C132, C4*C264, C2*C4*C132 ]
+/...............................................................................
+> time G,c,g,list:= group_extension(L,5,11*23*13);
+Runtime error: Input to IdentifyTwoCocycle is not a cocycle
+>>>>>>>>>>>>>>..but with high precision works>>>>>>>>>>>>>>>>below>>>>>>>>>>>
+> time G,c,g,list:= group_extension_prec(L,5,11*23*13);
+Time: 0.190
+> C2:=CohomologyGroup(c,2);
+> C2;
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 4 ]
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^2 = Id(G)
+    G.4^1320 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.4^-660 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-660 * G.3^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-661 = Id(G)
+    G.1^4 = Id(G)
+
+> [GroupName(Extension(c,i*C2.1)): i in [1..4]];
+[ C165:(C4^2.C2^3), C165:(C2*C2.(C2*C4^2)), C165:(C4^2.C2^3), 
+C165:(C2*C2.(C2*C4^2)) ]
+
+>>>>>>>>>>>>>>>.............>>>>>>>>>>>>>>..................>>>>>>>>>>>>
+> time G,c,g,list:= group_extension_prec(L,5,11*13*2);
+Time: 0.190
+> time G,c,g,list:= group_extension(L,5,11*13*2);     
+Time: 0.200
+> g;
+(0 1)
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^60 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.1, G.2^-1) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    G.1^4 * G.3^-1 = Id(G)
+    
+    
