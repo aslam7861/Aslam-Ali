@@ -24,3 +24,35 @@ Relations
 [ C2^2*C4, C2*C8, C2*C8, C2*C8, D4:C2, OD16, OD16, OD16 ]
 > GroupName(G);
 C2*C8
+
+
+
+
+
+
+
+
+> L:= AbsoluteField(NumberField([x^2-2, x^2-5]));
+> L1:=NumberField(x^4-4*x^2+2);      
+> time G,cm,im := group_extension_compositum_S(L,L1,5*3);
+Time: 2.260
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 2.430
+> im;
+(1 1 1)
+> GroupName(G);
+Q8
+> C2:=CohomologyGroup(cm,2);
+> [GroupName(Extension(cm,x)): x in C2];
+[ C2^3, D4, D4, C2*C4, D4, C2*C4, C2*C4, Q8 ]
+
+
+
+
+
+
+
+
+
