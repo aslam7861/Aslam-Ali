@@ -1,0 +1,26 @@
+////////////////////////////////////////////////////////Examnple of Claus where LocalCohomology was problem as stated in ClassField5.m///////////
+
+K:=AbsoluteField( NumberField( [x^2-2, x^2-3]));
+L1:= NumberField(x^4-4*x^2+2);     
+> time G,cm,a,list := group_extension_compositum(K,L1,2^3); 
+Time: 6.020
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 6.770
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.3^4 = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    G.1^2 = Id(G)
+    G.2^2 * G.3^-1 = Id(G)
+    G.1 * G.2 * G.1 * G.2 * G.3^-1 = Id(G)
+> a;
+(0 1 0)
+> C2:= CohomologyGroup(cm,2);
+> [GroupName(Extension(cm,x)): x in C2];
+[ C2^2*C4, C2*C8, C2*C8, C2*C8, D4:C2, OD16, OD16, OD16 ]
+> GroupName(G);
+C2*C8
