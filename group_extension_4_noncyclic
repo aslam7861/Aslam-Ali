@@ -1,0 +1,104 @@
+> L:=NumberField(PolynomialWithGaloisGroup(4,2));
+> L1:= NumberField(x^4-4*x^2+2);      
+> time G,cm,a := group_extension_compositum(L,L1,2^4);
+Time: 5.840
+> a;
+(0 1 1)
+> GroupName(G);
+OD16
+> C2:= CohomologyGroup(cm,2);
+> [GroupName(Extension(cm,   x)): x in C2];           
+[ C2^2*C4, C2*C8, C2*C8, C2*C8, D4:C2, OD16, OD16, OD16 ]
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+> time G,cm,a,list := group_extension_compositum(L,L1,2*7);
+Time: 4.850
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 5.250
+> a;
+(1 1 1)
+> GroupName(G);
+C3*Q8
+> C2:= CohomologyGroup(cm,2);                
+> [GroupName(Extension(cm,   x)): x in C2];
+[ C2^2*C6, C2*C12, C2*C12, C2*C12, C3*D4, C3*D4, C3*D4, C3*Q8 ]
+> 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+> time G,cm,a,list := group_extension_compositum(L,L1,2*5);
+Time: 4.530
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 4.770
+> a;
+(0 1 1)
+> GroupName(G);
+C2*C4
+> C2:= CohomologyGroup(cm,2);
+> [GroupName(Extension(cm,   x)): x in C2];
+[ C2^3, D4, D4, C2*C4, D4, C2*C4, C2*C4, Q8 ]
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+> time G,cm,a,list := group_extension_compositum(L,L1,5*3);
+Time: 4.740
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 5.140
+> a;
+(0 0 1)
+> C2:= CohomologyGroup(cm,2);
+> [GroupName(Extension(cm,   x)): x in C2];
+[ C2^3, D4, D4, C2*C4, D4, C2*C4, C2*C4, Q8 ]
+> GroupName(G);
+D4
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+
+> time G,cm,a,list := group_extension_compositum(L,L1,2^3);
+Time: 4.080
+> a;
+(1 1 0)
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.3^2 = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    G.1^2 * G.3^-1 = Id(G)
+    G.2^2 * G.3^-1 = Id(G)
+    (G.1 * G.2)^2 = Id(G)
+> C2:= CohomologyGroup(cm,2);
+> [GroupName(Extension(cm,   x)): x in C2];
+[ C2^3, D4, D4, C2*C4, D4, C2*C4, C2*C4, Q8 ]
+> GroupName(Extension(cm,a));
+C2*C4
+> GroupName(G);                                            
+C2*C4
+> list[4]`primes;  //S                                        
+[ 2, 5 ]
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>..
+> time G,cm,a,list := group_extension_compositum(L,L1,3^2);
+Time: 4.250
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+Time: 4.570
+> a;
+Matrix with 1 row and 0 columns
+> C2:= CohomologyGroup(cm,2);
+> C2;
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+> #G;
+12
+
+
+
+
+
+
+
