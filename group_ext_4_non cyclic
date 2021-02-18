@@ -47,6 +47,32 @@ Q8
 > C2:=CohomologyGroup(cm,2);
 > [GroupName(Extension(cm,x)): x in C2];
 [ C2^3, D4, D4, C2*C4, D4, C2*C4, C2*C4, Q8 ]
+> time G,cm,im := group_extension_compositum_S(L,L1,2*7);
+Time: 2.160
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 2.340
+> im;
+(1 0 0)
+> GroupName(G);
+C2*C12
+> C2:=CohomologyGroup(cm,2);
+> [GroupName(Extension(cm,x)): x in C2];
+[ C2^2*C6, C2*C12, C2*C12, C2*C12, C3*D4, C3*D4, C3*D4, C3*Q8 ]
+> timeG,cm,im := group_extension_compositum_S(L,L1,5*3);  
+Time: 2.220
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+> im;
+(1 0 1)
+> C2:=CohomologyGroup(cm,2);
+> GroupName(G);                         
+C2*C12
+> [GroupName(Extension(cm,x)): x in C2];
+[ C2^3, D4, D4, C2*C4, D4, C2*C4, C2*C4, Q8 ]
+> 
 
 
 
