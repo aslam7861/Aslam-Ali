@@ -5,6 +5,43 @@
 > L1:= NumberField(g);
 > Factorisation(Discriminant(MaximalOrder(L)));
 [ <13, 5> ]
+>  time fp, cm ,im :=group_extension_compositum_invariant(L,L1,650*7,[6]);  
+Time: 28.550
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 6 ]
+Time: 29.430
+> im;
+(3)
+> GroupName(fp);
+C3*C12
+> fp;
+Finitely presented group fp on 2 generators
+Relations
+    fp.2^6 = Id(fp)
+    (fp.1, fp.2^-1) = Id(fp)
+    fp.1^6 * fp.2^-3 = Id(fp)
+> 
+>  time fp, cm ,im :=group_extension_compositum_invariant(L,L1,650*7,[3]);  
+Time: 54.660
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+Time: 55.800
+> im;
+(0)
+> GroupName(fp);
+C3*C6
+> fp;
+Finitely presented group fp on 2 generators
+Relations
+    fp.2^3 = Id(fp)
+    (fp.1, fp.2^-1) = Id(fp)
+    fp.1^6 = Id(fp)
+> 
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 > time G,cm,im, list := group_extension_compositum(L,L1,13^2);
 Time: 58.730
 > list[4]`primes; 
