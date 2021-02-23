@@ -1,0 +1,60 @@
+> L:=  NumberField(PolynomialWithGaloisGroup(4,2));
+> L1 := NumberField(x^4-4*x^2+2);
+> time fp, cm ,im :=group_extension_compositum_invariant(L,L1,1690,[4]);
+Time: 1.900
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 2.310
+> GroupName(fp);
+OD16
+> time fp, cm ,im :=group_extension_compositum_invariant(L,L1,1690,[2]);
+Time: 2.070
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 2.630
+> GroupName(fp);
+C2*C4
+> time fp, cm ,im :=group_extension_compositum_invariant(L,L1,1690,[2]);
+Time: 2.030
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 2.580
+> GroupName(fp);                                                        
+D4
+> time fp, cm ,im :=group_extension_compositum_invariant(L,L1,1690,[2,2]);
+Time: 2.200
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 2.770
+> im;
+(0)
+> GroupName(fp);
+C2*D4
+> #fp;
+16
+> time fp, cm ,im :=group_extension_compositum_invariant(L,L1,1690,[2,2,2]);
+Time: 2.070
+Full Quotient RSpace of degree 4 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2 ]
+Time: 2.510
+> GroupName(fp);
+C2^2:Q8
+> #fp;
+32
+> time fp, cm ,im :=group_extension_compositum_invariant(L,L1,1690,[8]);
+Time: 1.990
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 2.430
+> im;
+(0)
+> #fp;
+32
+> GroupName(fp);
+C2*OD16
