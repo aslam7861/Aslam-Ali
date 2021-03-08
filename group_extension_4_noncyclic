@@ -97,8 +97,29 @@ Column moduli:
 12
 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
 
-
+> L:=NumberField(PolynomialWithGaloisGroup(4,2));
+> L1:=NumberField(PolynomialWithGaloisGroup(4,1));
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,30*11,[4]);
+Time: 5.020
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 5.800
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.3^4 = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    G.2^-1 * G.3 * G.2 * G.3^-3 = Id(G)
+    G.1^2 = Id(G)
+    G.2^2 * G.3^-2 = Id(G)
+    (G.1 * G.2)^2 = Id(G)
+> g;
+(0 1 0)
+> GroupName(G);
+D4:C2
 
 
 
