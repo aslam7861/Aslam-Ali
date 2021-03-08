@@ -63,4 +63,54 @@ Relations
     (G.1, G.3^-1) = Id(G)
     G.1^4 * G.3^-1 = Id(G)
     
-    
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+> L:=NumberField(PolynomialWithGaloisGroup(4,1));
+> time a,b,c:= group_extension_inv(L,3,15*11^2,[5,5]);
+Time: 0.490
+> a;
+Finitely presented group a on 3 generators
+Relations
+    a.2^5 = Id(a)
+    a.3^5 = Id(a)
+    (a.2, a.3) = Id(a)
+    a.1^-1 * a.2 * a.1 * a.3^-4 = Id(a)
+    a.1^-1 * a.3 * a.1 * a.2^-4 = Id(a)
+    a.1^4 = Id(a)
+> 
+> time a1,b1,c1:= group_extension_inv(L,3,15*11^2,[6,6]);
+Time: 0.490
+> a1;                                                    
+Finitely presented group a1 on 3 generators
+Relations
+    a1.2^6 = Id(a1)
+    a1.3^6 = Id(a1)
+    (a1.2, a1.3) = Id(a1)
+    a1.1^-1 * a1.2 * a1.1 * a1.3^-5 = Id(a1)
+    a1.1^-1 * a1.3 * a1.1 * a1.2^-1 = Id(a1)
+    a1.1^4 * a1.2^-3 * a1.3^-3 = Id(a1)
+> CohomologyGroup(b1,2);                                 
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+> c1;
+(1) 
+
+> time a1,b1,c1:= group_extension_inv(L,3,15*7^2,[20]);
+Time: 0.490
+> a1;                                                  
+Finitely presented group a1 on 2 generators
+Relations
+    a1.2^20 = Id(a1)
+    a1.1^-1 * a1.2 * a1.1 * a1.2^-7 = Id(a1)
+    a1.1^4 = Id(a1)
+> CohomologyGroup(b1,2);
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+> c1;
+(0)
+
+
+
+
