@@ -122,6 +122,176 @@ C24
 >  g:= x^6 - 26*x^5 + 215*x^4 - 598*x^3 + 350*x^2 + 416*x - 47; 
 > L:= NumberField(f);
 > L1:= NumberField(g);
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,208,[4]);
+Time: 29.160
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 29.890
+> g;
+(1)
+> G;
+Finitely presented group G on 2 generators
+Relations
+    G.2^4 = Id(G)
+    (G.1, G.2^-1) = Id(G)
+    G.1^6 * G.2^-1 = Id(G)
+> GroupName(G);
+C24
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,260,[2,2,2,2])\
+;
+Time: 26.580
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+Time: 27.220
+> G;
+Finitely presented group G on 5 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^2 = Id(G)
+    G.4^2 = Id(G)
+    G.5^2 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.2, G.5) = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.3, G.5) = Id(G)
+    (G.4, G.5) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.5^-1 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.5^-1 * G.3^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.5^-1 * G.4^-1 = Id(G)
+    G.1^-1 * G.5 * G.1 * G.3^-1 = Id(G)
+    G.1^6 * G.2^-1 * G.4^-1 = Id(G)
+> GroupName(G);
+C2*C4*A4
+> 
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,260,[2,2,2,4])\
+;
+Time: 27.460
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+Time: 28.110
+> GroupName(G);
+C4^2*A4
+> G;
+Finitely presented group G on 5 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^2 = Id(G)
+    G.4^2 = Id(G)
+    G.5^4 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.2, G.5) = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.3, G.5) = Id(G)
+    (G.4, G.5) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.4^-1 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-1 * G.3^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.2^-1 = Id(G)
+    G.1^-1 * G.5 * G.1 * G.5^-1 * G.4^-1 = Id(G)
+    G.1^6 * G.2^-1 * G.3^-1 = Id(G)
+> 
+
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,364,[2,36]);
+Time: 27.960
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 28.600
+> g;
+(1)
+> GroupName(G);
+OD16*C9:C3
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^36 = Id(G)
+    (G.2, G.3) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.3^-18 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.3^-31 = Id(G)
+    G.1^6 * G.2^-1 * G.3^-3 = Id(G)
+> 
+
+
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,572,[2,20]);
+Time: 26.500
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 27.160
+> g;
+(1)
+> GroupName(G);
+C15*OD16
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^20 = Id(G)
+    (G.2, G.3) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.3^-10 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.3^-11 = Id(G)
+    G.1^6 * G.2^-1 * G.3^-1 = Id(G)
+> 
+
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,416,[4,4]); 
+Time: 26.540
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 27.230
+> g;
+(0)
+> GroupName(G);
+C3*(C2*C4):C4
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^4 = Id(G)
+    G.3^4 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.1, G.2^-1) = Id(G)
+    G.1^-1 * G.3 * G.1 * G.3^-1 * G.2^-2 = Id(G)
+    G.1^6 = Id(G)
+> 
+
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,234,[3,3,3]);
+Time: 26.470
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+Time: 27.250
+> g;
+(1)
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^3 = Id(G)
+    G.3^3 = Id(G)
+    G.4^3 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.2^-1) = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-2 * G.3^-1 * G.2^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-2 = Id(G)
+    G.1^6 * G.2^-1 = Id(G)
+> GroupName(G);
+S3*C9:C3
+> 
+
+
+
+
+
+
+
+
+
 > time c,a,b,l :=group_extension_compositum(L,L1,23^2);
 Time: 58.520
 Full Quotient RSpace of degree 0 over Integer Ring
