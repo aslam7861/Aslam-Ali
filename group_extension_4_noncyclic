@@ -1,3 +1,119 @@
+L:=NumberField(PolynomialWithGaloisGroup(4,2));
+L1:=NumberField(PolynomialWithGaloisGroup(4,));
+
+
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,30*11,[2,2]);
+Time: 4.700
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+Time: 5.460
+> GroupName(G);
+C2^2:C4
+> RayClassGroup(MaximalOrder(L)*30);
+Abelian Group isomorphic to Z/2 + Z/4
+Defined on 2 generators
+Relations:
+    2*$.1 = 0
+    4*$.2 = 0
+Mapping from: Abelian Group isomorphic to Z/2 + Z/4
+Defined on 2 generators
+Relations:
+    2*$.1 = 0
+    4*$.2 = 0 to Set of ideals of Maximal Order of Equation Order with defining 
+polynomial x^4 - 6*x^2 + 4 over its ground order
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,30*11,[2,4]);
+Time: 4.470
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+Time: 5.220
+> #G;
+32
+> GroupName(G);
+C4*Q8
+> g;
+(1 0 1 1 0 1)
+> 
+
+
+
+
+
+
+> L:=NumberField(PolynomialWithGaloisGroup(4,2));
+> L1:= NumberField(x^4-4*x^2+2);      
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,10*40,[4,4]);
+Time: 1.780
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+Time: 2.200
+> G;                                                                         
+Finitely presented group G on 4 generators
+Relations
+    G.3^4 = Id(G)
+    G.4^4 = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.1, G.4^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    (G.2, G.4^-1) = Id(G)
+    G.1^2 * G.3^-1 = Id(G)
+    G.2^2 * G.3^-1 * G.4^-1 = Id(G)
+    G.1 * G.2 * G.1 * G.2 * G.3^-2 * G.4^-1 = Id(G)
+> GroupName(G);
+C8^2
+> 
+> time G,cm,g,list := group_extension_compositum_invariant(L,L1,10*40,[2,10]); 
+Time: 1.790
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+Time: 2.210
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.3^2 = Id(G)
+    G.4^10 = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.1, G.4^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    (G.2, G.4^-1) = Id(G)
+    G.1^2 = Id(G)
+    G.2^2 * G.3^-1 = Id(G)
+    G.1 * G.2 * G.1 * G.2 * G.3^-1 = Id(G)
+> GroupName(G);
+C2^2*C20
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 > L:=NumberField(PolynomialWithGaloisGroup(4,2));
 > L1:= NumberField(x^4-4*x^2+2);      
 > time G,cm,a := group_extension_compositum(L,L1,2^4);
