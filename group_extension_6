@@ -1,5 +1,5 @@
 
-> f:=x^6 - 13*x^5 + 65*x^4 - 156*x^3 + 182*x^2 - 91*x + 13;
+> f:=x^6 - 13*x^5 + 65*x^4 - 156*x^3 + 182*x^2 - 91*x + 13; //cyclic
 >  g:= x^6 - 26*x^5 + 215*x^4 - 598*x^3 + 350*x^2 + 416*x - 47; 
 > L:= NumberField(f);
 > L1:= NumberField(g);
@@ -61,56 +61,6 @@ Relations
     G.1^6 = Id(G)
 
 
-> time G,cm,im, list := group_extension_compositum(L,L1,10);
-Time: 63.810
-Full Quotient RSpace of degree 1 over Integer Ring
-Column moduli:
-[ 2 ]
-Time: 64.880
-> GroupName(G);
-C3*C3:C4
-> C2:= CohomologyGroup(cm,2);
-> [GroupName(Extension(cm,i*C2.1)): i in [1..#C2]];
-[ C3*C3:C4, C6*S3 ]
-> G;                                                         
-Finitely presented group G on 2 generators
-Relations
-    G.2^6 = Id(G)
-    G.1^-1 * G.2 * G.1 * G.2^-5 = Id(G)
-    G.1^6 * G.2^-3 = Id(G)
-
-> time G,cm,im, list := group_extension_compositum(L,L1,25); 
-Time: 39.510
-Full Quotient RSpace of degree 1 over Integer Ring
-Column moduli:
-[ 2 ]
-Time: 40.170
-> G;
-Finitely presented group G on 2 generators
-Relations
-    G.2^10 = Id(G)
-    (G.1, G.2^-1) = Id(G)
-    G.1^6 = Id(G)
-> GroupName(G);
-C2*C30
-> C2:= CohomologyGroup(cm,2);
-> [GroupName(Extension(cm,i*C2.1)): i in [1..#C2]];
-[ C60, C2*C30 ]
-
-
-
-> time G,cm,im := group_extension_compositum(L,L1,2^4); // modulus with ramified primes
-Time: 53.150
-> im;
-(1)
-> GroupName(G);
-C24
-> Invariants(cm);
-[ 4 ]
-> C2:= CohomologyGroup(cm,2);
-> [GroupName(Extension(cm,i*C2.1)): i in [1..#C2]];
-[ C24, C2*C12 ]
-> 
 
 
 
@@ -118,7 +68,8 @@ C24
 
 
 
-> f:=x^6 - 13*x^5 + 65*x^4 - 156*x^3 + 182*x^2 - 91*x + 13;
+
+> f:=x^6 - 13*x^5 + 65*x^4 - 156*x^3 + 182*x^2 - 91*x + 13;  //cyclic
 >  g:= x^6 - 26*x^5 + 215*x^4 - 598*x^3 + 350*x^2 + 416*x - 47; 
 > L:= NumberField(f);
 > L1:= NumberField(g);
