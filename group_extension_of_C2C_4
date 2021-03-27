@@ -1,0 +1,72 @@
+> AttachSpec("alispec"); 
+> x:= PolynomialRing(Integers()).1;
+> f:=x^8 - 28*x^6 + 210*x^4 - 356*x^2 + 49;
+> L:= NumberField(f);
+>  g:= x^8 - 8*x^6 + 20*x^4 - 16*x^2 + 2; 
+> L1:= NumberField(g);
+> time CohL,f1CL,gfc,comp,req := gfcCompositumcl(L,L1);
+Time: 83.790
+> time G,cm,g,lst:= group_extension_compositum_inv(L,L1,480,[2,4]:GFC:=list);
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 4 ]
+Time: 6.290
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.3^2 = Id(G)
+    G.4^4 = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.1, G.4^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    (G.2, G.4^-1) = Id(G)
+    G.1^4 * G.4^-3 = Id(G)
+    G.2^-1 * G.1^2 * G.2^-1 * G.3^-1 = Id(G)
+    G.1^-1 * G.2^-1 * G.1 * G.2 * G.4^-2 = Id(G)
+> GroupName(G);   
+C2.OD32
+
+> time G,cm,g,lst:= group_extension_compositum_inv(L,L1,90,[3,6]:GFC:=list);
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 3.700
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.3^3 = Id(G)
+    G.4^6 = Id(G)
+    (G.3, G.4) = Id(G)
+    G.1^-1 * G.3 * G.1 * G.3^-2 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-5 = Id(G)
+    G.2^-1 * G.3 * G.2 * G.4^-2 * G.3^-2 = Id(G)
+    (G.2, G.4^-1) = Id(G)
+    G.1^4 * G.4^-3 = Id(G)
+    G.2^-1 * G.1^2 * G.2^-1 * G.4^-1 = Id(G)
+    G.1^-1 * G.2^-1 * G.1 * G.2 * G.4^-2 = Id(G)
+> GroupName(G);
+S3*C3:C8
+
+> time G,cm,g,lst:= group_extension_compositum_inv(L,L1,90,[6,6]:GFC:=list);
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+Time: 4.080
+> G;           
+Finitely presented group G on 4 generators
+Relations
+    G.3^6 = Id(G)
+    G.4^6 = Id(G)
+    (G.3, G.4) = Id(G)
+    G.1^-1 * G.3 * G.1 * G.3^-5 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-5 = Id(G)
+    G.2^-1 * G.3 * G.2 * G.4^-2 * G.3^-5 = Id(G)
+    (G.2, G.4^-1) = Id(G)
+    G.1^4 * G.3^-3 * G.4^-3 = Id(G)
+    G.2^-1 * G.1^2 * G.2^-1 * G.4^-1 = Id(G)
+    G.1^-1 * G.2^-1 * G.1 * G.2 * G.4^-2 = Id(G)
+> GroupName(G);
+C3:C4*C3:C8
+> 
+
