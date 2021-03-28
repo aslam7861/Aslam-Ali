@@ -3,6 +3,213 @@
 >  g:= x^6 - 26*x^5 + 215*x^4 - 598*x^3 + 350*x^2 + 416*x - 47; 
 > L:= NumberField(f);
 > L1:= NumberField(g);
+
+> time G,cm,gfc,list := group_extension_inv(L,13,260,[2,2,2,2]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+Time: 0.360
+> G;
+Finitely presented group G on 5 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^2 = Id(G)
+    G.4^2 = Id(G)
+    G.5^2 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.2, G.5) = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.3, G.5) = Id(G)
+    (G.4, G.5) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.5^-1 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.5^-1 * G.3^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.5^-1 * G.4^-1 = Id(G)
+    G.1^-1 * G.5 * G.1 * G.3^-1 = Id(G)
+    G.1^6 = Id(G)
+> GroupName(G);
+C2^3*A4
+> 
+
+
+> time G,cm,gfc,list := group_extension_inv(L,13,260,[2,2,2,4]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+Time: 0.360
+> G;
+Finitely presented group G on 5 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^2 = Id(G)
+    G.4^2 = Id(G)
+    G.5^4 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.2, G.5) = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.3, G.5) = Id(G)
+    (G.4, G.5) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.4^-1 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-1 * G.3^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.2^-1 = Id(G)
+    G.1^-1 * G.5 * G.1 * G.5^-1 * G.4^-1 = Id(G)
+    G.1^6 = Id(G)
+> GroupName(G);
+C2^2*C4*A4
+> 
+> time G,cm,gfc,list := group_extension_inv(L,13,364,[2,36]:GFC:=list); 
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 0.380
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^36 = Id(G)
+    (G.2, G.3) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.3^-18 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.3^-31 = Id(G)
+    G.1^6 = Id(G)
+> GroupName(G);
+D4:C2*C9:C3
+
+
+> time G,cm,gfc,list := group_extension_inv(L,13,572,[2,20]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 0.370
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^20 = Id(G)
+    (G.2, G.3) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.3^-10 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.3^-11 = Id(G)
+    G.1^6 = Id(G)
+> GroupName(G);
+C15*D4:C2
+
+> time G,cm,gfc,list := group_extension_inv(L,13,234,[3,3,3]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+Time: 0.370
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^3 = Id(G)
+    G.3^3 = Id(G)
+    G.4^3 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.2^-1) = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-2 * G.3^-1 * G.2^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-2 = Id(G)
+    G.1^6 * G.2^-1 = Id(G)
+> GroupName(G);
+S3*C9:C3
+> gfc;
+(1)
+> 
+
+
+> time G,cm,gfc,list := group_extension_inv(L,13,572,[2,20]);           
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 0.600
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^20 = Id(G)
+    (G.2, G.3) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.3^-10 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.3^-11 = Id(G)
+    G.1^6 = Id(G)
+> GroupName(G);
+C15*D4:C2
+
+> time G,cm,gfc,list := group_extension_inv(L,13,234,[3,3,3]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+Time: 0.370
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^3 = Id(G)
+    G.3^3 = Id(G)
+    G.4^3 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.2^-1) = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-2 * G.3^-1 * G.2^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-2 = Id(G)
+    G.1^6 = Id(G)
+> GroupName(G);
+S3*He3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 > Factorisation(Discriminant(MaximalOrder(L)));
 [ <13, 5> ]
 >  time fp, cm ,im :=group_extension_compositum_invariant(L,L1,650*7,[6]);  
