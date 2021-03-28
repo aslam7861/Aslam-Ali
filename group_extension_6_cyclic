@@ -5,6 +5,20 @@
 //////////////> L1:= NumberField(g);
 > time CohL,f1Cl,gfc,comp,req := gfcUndecomposedcl(L,7);               
 Time: 0.450
+> time G,cm,gfc,list := group_extension_inv(L,7,4550,[6]:GFC:=list);   
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 6 ]
+Time: 0.380
+> G;
+Finitely presented group G on 2 generators
+Relations
+    G.2^6 = Id(G)
+    (G.1, G.2^-1) = Id(G)
+    G.1^6 = Id(G)
+> GroupName(G);
+C6^2
 
 > time G,cm,gfc,list := group_extension_inv(L,13,260,[2,2,2,2]:GFC:=list);
 Cohomology Group
