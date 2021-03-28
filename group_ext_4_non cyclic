@@ -1,7 +1,177 @@
 ////////////////////////////////////////////////////////Examnple of Claus where LocalCohomology was problem as stated in ClassField5.m///////////
 
 K:=AbsoluteField( NumberField( [x^2-2, x^2-3]));
-L1:= NumberField(x^4-4*x^2+2);     
+L1:= NumberField(x^4-4*x^2+2); 
+> time G,cm,u,list := group_extension_compositum_invariant(K,L1,48,[4]);  
+Full Quotient RSpace of degree 3 over Integer Ring
+Column moduli:
+[ 2, 2, 2 ]
+Time: 3.530
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.3^4 = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    G.2^-1 * G.3 * G.2 * G.3^-3 = Id(G)
+    G.1^2 = Id(G)
+    G.2^2 * G.3^-2 = Id(G)
+    (G.1 * G.2)^2 = Id(G)
+> GroupName(G);
+D4:C2
+> u;
+(0 1 0)
+
+> time G,cm,gfc,list := group_extension_compositum_invariant(K,L1,48,[4,4]); 
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+Time: 3.080
+> lst:= list;
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.3^4 = Id(G)
+    G.4^4 = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.1, G.4^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    G.2^-1 * G.4 * G.2 * G.4^-3 = Id(G)
+    G.1^2 * G.3^-1 = Id(G)
+    G.2^2 * G.3^-1 = Id(G)
+    G.1 * G.2 * G.1 * G.2 * G.3^-2 = Id(G)
+> GroupName(G);
+C8*D4
+> CohomologyGroup(cm,2);
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+> gfc;
+(1 0 1 0 0 0)
+> 
+> time G,cm,gfc,list := group_extension_compositum_invariant(K,L1,72,[4,4]); 
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+Time: 3.120
+> GroupName(G);
+(C2*C4^2).C2
+> lst:= list;
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.3^4 = Id(G)
+    G.4^4 = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.1, G.4^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    G.2^-1 * G.4 * G.2 * G.4^-3 = Id(G)
+    G.1^2 = Id(G)
+    G.2^2 * G.4^-2 = Id(G)
+    G.1 * G.2 * G.1 * G.2 * G.3^-2 * G.4^-2 = Id(G)
+> > time G,cm,gfc,list := group_extension_compositum_invariant(K,L1,72,[2,2]:GFC\
+:=lst); 
+Full Quotient RSpace of degree 6 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2 ]
+Time: 0.820
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.3^2 = Id(G)
+    G.4^2 = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.1, G.4^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    (G.2, G.4^-1) = Id(G)
+    G.1^2 = Id(G)
+    G.2^2 = Id(G)
+    (G.1 * G.2)^2 = Id(G)
+> GroupName(G);
+C2^4
+> time G,cm,gfc,list := group_extension_compositum_invariant(K,L1,60,[2,2,2]:G\
+FC:=lst); 
+Full Quotient RSpace of degree 4 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2 ]
+Time: 1.010
+> GroupName(G);
+C2^2*D4
+> G;
+Finitely presented group G on 5 generators
+Relations
+    G.3^2 = Id(G)
+    G.4^2 = Id(G)
+    G.5^2 = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.3, G.5) = Id(G)
+    (G.4, G.5) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-1 * G.3^-1 = Id(G)
+    (G.1, G.5^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    (G.2, G.4^-1) = Id(G)
+    (G.2, G.5^-1) = Id(G)
+    G.1^2 = Id(G)
+    G.2^2 = Id(G)
+    (G.1 * G.2)^2 = Id(G)
+> 
+> time G,cm,gfc,list := group_extension_compositum_invariant(K,L1,60,[2,2,2,2]\
+:GFC:=lst); 
+Full Quotient RSpace of degree 7 over Integer Ring
+Column moduli:
+[ 2, 2, 2, 2, 2, 2, 2 ]
+Time: 1.110
+> G;
+Finitely presented group G on 6 generators
+Relations
+    G.3^2 = Id(G)
+    G.4^2 = Id(G)
+    G.5^2 = Id(G)
+    G.6^2 = Id(G)
+    (G.3, G.4) = Id(G)
+    (G.3, G.5) = Id(G)
+    (G.3, G.6) = Id(G)
+    (G.4, G.5) = Id(G)
+    (G.4, G.6) = Id(G)
+    (G.5, G.6) = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-1 * G.3^-1 = Id(G)
+    (G.1, G.5^-1) = Id(G)
+    (G.1, G.6^-1) = Id(G)
+    (G.2, G.3^-1) = Id(G)
+    (G.2, G.4^-1) = Id(G)
+    (G.2, G.5^-1) = Id(G)
+    (G.2, G.6^-1) = Id(G)
+    G.1^2 = Id(G)
+    G.2^2 = Id(G)
+    (G.1 * G.2)^2 = Id(G)
+> GroupName(G);
+C2^3*D4
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 > time G,cm,a,list := group_extension_compositum(K,L1,2^3); 
 Time: 6.020
 Full Quotient RSpace of degree 3 over Integer Ring
