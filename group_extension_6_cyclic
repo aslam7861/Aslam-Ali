@@ -113,7 +113,7 @@ Relations
 > GroupName(G);
 C15*D4:C2
 
-> time G,cm,gfc,list := group_extension_inv(L,13,234,[3,3,3]:GFC:=list);
+> time G,cm,gfc,list := group_extension_inv(L,13,234,[3,3,3]);
 Cohomology Group
 Full Quotient RSpace of degree 1 over Integer Ring
 Column moduli:
