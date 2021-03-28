@@ -1,5 +1,5 @@
 
-> f:=x^6 - 13*x^5 + 65*x^4 - 156*x^3 + 182*x^2 - 91*x + 13; //cyclic
+> f:=x^6 - 13*x^5 + 65*x^4 - 156*x^3 + 182*x^2 - 91*x + 13; //cyclic// use this for cyclic case
 >  g:= x^6 - 26*x^5 + 215*x^4 - 598*x^3 + 350*x^2 + 416*x - 47; 
 > L:= NumberField(f);
 > L1:= NumberField(g);
