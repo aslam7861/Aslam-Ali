@@ -1,0 +1,152 @@
+L:=NumberField(PolynomialWithGaloisGroup(4,1));
+> time G,cm,gfc,list := group_extension_inv(L,5,15*8,[2,2]);
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 0.580
+> G;
+Finitely presented group G on 3 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^2 = Id(G)
+    (G.2, G.3) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.3^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.2^-1 = Id(G)
+    G.1^4 * G.2^-1 * G.3^-1 = Id(G)
+> GroupName(G);
+OD16
+> time G,cm,gfc,list := group_extension_inv(L,5,15*72,[2,2,2]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+Time: 0.300
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^2 = Id(G)
+    G.4^2 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.4^-1 * G.3^-1 * G.2^-1 = Id(G)
+    (G.1, G.3^-1) = Id(G)
+    (G.1, G.4^-1) = Id(G)
+    G.1^4 * G.3^-1 * G.4^-1 = Id(G)
+> GroupName(G);
+C2*OD16
+> gfc;                                                                   
+(1 1)
+
+> time G,cm,gfc,list := group_extension_inv(L,5,15*72,[2,2,4]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+Time: 0.670
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^2 = Id(G)
+    G.4^4 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.4^-2 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-2 * G.3^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-1 * G.3^-1 * G.2^-1 = Id(G)
+    G.1^4 * G.2^-1 * G.3^-1 * G.4^-2 = Id(G)
+> GroupName(G);
+C4^2.C4
+> time G,cm,gfc,list := group_extension_inv(L,5,15*72,[2,4,4]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 0.280
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^2 = Id(G)
+    G.3^4 = Id(G)
+    G.4^4 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.4^-2 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-2 * G.3^-3 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-1 * G.3^-3 * G.2^-1 = Id(G)
+    G.1^4 * G.2^-1 * G.3^-1 * G.4^-2 = Id(G)
+> GroupName(G);
+(C4*OD16).C2
+> gfc;
+(1)
+> 
+> time G,cm,gfc,list := group_extension_inv(L,5,15*32,[4,4,4]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+Time: 0.290
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^4 = Id(G)
+    G.3^4 = Id(G)
+    G.4^4 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.4^-2 * G.3^-2 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-1 * G.3^-3 * G.2^-2 = Id(G)
+    (G.1, G.4^-1) = Id(G)
+    G.1^4 * G.2^-2 * G.4^-1 = Id(G)
+> GroupName(G);
+(C2^2*C8).C2^3
+> gfc;
+(1 1)
+> time G,cm,gfc,list := group_extension_inv(L,5,15*32,[4,4,8]:GFC:=list);
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 0.280
+> G;
+Finitely presented group G on 4 generators
+Relations
+    G.2^4 = Id(G)
+    G.3^4 = Id(G)
+    G.4^8 = Id(G)
+    (G.2, G.3) = Id(G)
+    (G.2, G.4) = Id(G)
+    (G.3, G.4) = Id(G)
+    G.1^-1 * G.2 * G.1 * G.4^-6 * G.3^-2 * G.2^-1 = Id(G)
+    G.1^-1 * G.3 * G.1 * G.4^-4 * G.3^-1 = Id(G)
+    G.1^-1 * G.4 * G.1 * G.4^-7 * G.3^-1 * G.2^-2 = Id(G)
+    G.1^4 * G.2^-2 * G.3^-1 = Id(G)
+> GroupName(G);
+C4^2.C4^2.C2
+> gfc;
+(1)
+
+
+> time G,cm,gfc,list := group_extension_inv(L,5,15*169,[26]:GFC:=list);   
+Cohomology Group
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+Time: 0.940
+> G;
+Finitely presented group G on 2 generators
+Relations
+    G.2^26 = Id(G)
+    G.1^-1 * G.2 * G.1 * G.2^-21 = Id(G)
+    G.1^4 = Id(G)
+> GroupName(G);
+C2*D13.C2
+
+
+
