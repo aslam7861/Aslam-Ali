@@ -1,0 +1,4 @@
+> L:= NumberField(PolynomialWithGaloisGroup(12,1));     
+> time CohL,f1CL,gfc,comp,req := gfcUndecomposedcl(L,7);
+Time: 9.450
+> list := [* CohL,f1CL,gfc,comp,req  *];
